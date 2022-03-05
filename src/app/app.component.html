@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<!-- Seleção da página -->
+<span *ngIf="pagina1; then pagina1 else pagina2"></span>
+
+<hr />
+<!-- Seletor de páginas -->
+<button (click)="alterarPagina()">Alterar página</button>
+
+<!-- Criando template -->
+
+<ng-template #pagina1>Página 01</ng-template>
+<ng-template #pagina2>Página 02</ng-template>
